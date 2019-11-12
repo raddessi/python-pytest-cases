@@ -31,9 +31,7 @@ except Exception as e:
     try:
         from six import raise_from
     except Exception as e:
-        raise_from(
-            Exception("Required packages for setup not found. Please install `six`"), e
-        )
+        raise Exception("Required packages for setup not found. Please install `six`")
 
     raise_from(
         Exception(
